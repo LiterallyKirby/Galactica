@@ -1,0 +1,209 @@
+
+=================================================================================
+2025-10-13 19:21:25.440Z: Configuration starting...
+2025-10-13 19:21:25.451Z: Cloning...
+
+=================================================================================
+2025-10-13 19:21:25.497Z: Creating container...
+2025-10-13 19:21:25.531Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/Galactica --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --skip-post-create --remove-existing-container --config "/var/lib/docker/codespacemount/workspace/Galactica/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2025-10-13 19:21:25.679Z: @devcontainers/cli 0.80.0. Node.js v18.20.6. linux 6.8.0-1030-azure x64.
+2025-10-13 19:21:26.268Z: Resolving Feature dependencies for 'ghcr.io/devcontainers/features/common-utils:2'...
+2025-10-13 19:21:26.428Z: Resolving Feature dependencies for 'ghcr.io/devcontainers/features/rust:1'...
+2025-10-13 19:21:26.695Z: Files to omit: ''
+2025-10-13 19:21:26.821Z: Files to omit: ''
+2025-10-13 19:21:26.836Z: $latest --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /tmp/devcontainercli-root/container-features/0.80.0-1760383286265/Dockerfile.extended -t vsc-galactica-48318500f38e7126a2f9a98460b7b0f6be1462d7706e785ccc1645d2b449dc4d-features /var/lib/docker/codespacemount/.persistedshare/empty-folder
+2025-10-13 19:21:27.449Z: #0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile.extended
+#2 transferring dockerfile: 3.88kB done
+#2 DONE 0.0s
+
+#3 [auth] docker/dockerfile:pull token for registry-1.docker.io
+2025-10-13 19:21:27.599Z: #3 DONE 0.0s
+
+#4 resolve image config for docker.io/docker/dockerfile:1.4
+2025-10-13 19:21:27.878Z: #4 DONE 0.5s
+2025-10-13 19:21:27.990Z: 
+2025-10-13 19:21:27.990Z: #5 docker-image://docker.io/docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc
+#5 resolve docker.io/docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc done
+#5 sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc 2.00kB / 2.00kB done
+#5 sha256:ad87fb03593d1b71f9a1cfc1406c4aafcb253b1dabebf569768d6e6166836f34 528B / 528B done
+#5 sha256:1e8a16826fd1c80a63fa6817a9c7284c94e40cded14a9b0d0d3722356efa47bd 2.37kB / 2.37kB done
+#5 sha256:1328b32c40fca9bcf9d70d8eccb72eb873d1124d72dadce04db8badbe7b08546 2.10MB / 9.94MB 0.1s
+2025-10-13 19:21:28.189Z: #5 sha256:1328b32c40fca9bcf9d70d8eccb72eb873d1124d72dadce04db8badbe7b08546 9.94MB / 9.94MB 0.3s2025-10-13 19:21:28.190Z: 
+2025-10-13 19:21:28.288Z: #5 sha256:1328b32c40fca9bcf9d70d8eccb72eb873d1124d72dadce04db8badbe7b08546 9.94MB / 9.94MB 0.3s done
+2025-10-13 19:21:28.392Z: #5 extracting sha256:1328b32c40fca9bcf9d70d8eccb72eb873d1124d72dadce04db8badbe7b08546 0.1s
+2025-10-13 19:21:28.559Z: #5 extracting sha256:1328b32c40fca9bcf9d70d8eccb72eb873d1124d72dadce04db8badbe7b08546 0.1s done2025-10-13 19:21:28.559Z: 
+#5 DONE 0.6s
+2025-10-13 19:21:28.739Z: 
+#6 [context dev_containers_feature_content_source] load .dockerignore
+#6 transferring dev_containers_feature_content_source: 2B done
+2025-10-13 19:21:28.739Z: #6 DONE 0.0s
+
+#7 [auth] library/archlinux:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/archlinux:latest
+2025-10-13 19:21:28.865Z: #8 DONE 0.3s
+2025-10-13 19:21:29.312Z: 
+#9 [context dev_containers_feature_content_source] load from client
+#9 transferring dev_containers_feature_content_source: 91.63kB done
+#9 DONE 0.0s
+
+#10 [dev_containers_feature_content_normalize 1/3] FROM docker.io/library/archlinux:latest@sha256:287bf95d97e4f952a94a1f4a83008c6a547405bacc44173bda151231a3c843aa
+#10 resolve docker.io/library/archlinux:latest@sha256:287bf95d97e4f952a94a1f4a83008c6a547405bacc44173bda151231a3c843aa 0.0s done
+#10 sha256:287bf95d97e4f952a94a1f4a83008c6a547405bacc44173bda151231a3c843aa 1.23kB / 1.23kB done
+#10 sha256:2fcdd55448255f87dd337ef5c0fdbd5e4fec432345db1aa5faea4bf2764b4ca8 1.22kB / 1.22kB done
+#10 sha256:9925fab8d3a14258be073f974b684d4e3c0dca839377532315bc0ee5eb518463 4.06kB / 4.06kB done
+#10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 2.10MB / 165.26MB 0.1s
+#10 sha256:5433a31b7d4e549851b2b1b22b37d84ace4122c21d1306cabef775c79b768e9d 0B / 8.35kB 0.1s
+2025-10-13 19:21:29.412Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 10.49MB / 165.26MB 0.2s
+2025-10-13 19:21:29.412Z: #10 sha256:5433a31b7d4e549851b2b1b22b37d84ace4122c21d1306cabef775c79b768e9d 8.35kB / 8.35kB 0.1s done
+2025-10-13 19:21:29.611Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 29.36MB / 165.26MB 0.4s
+2025-10-13 19:21:29.812Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 44.04MB / 165.26MB 0.6s
+2025-10-13 19:21:30.012Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 52.43MB / 165.26MB 0.8s
+2025-10-13 19:21:30.212Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 60.82MB / 165.26MB 1.0s
+2025-10-13 19:21:30.511Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 79.69MB / 165.26MB 1.3s
+2025-10-13 19:21:30.711Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 97.52MB / 165.26MB 1.5s
+2025-10-13 19:21:30.812Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 108.00MB / 165.26MB 1.6s
+2025-10-13 19:21:31.012Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 124.78MB / 165.26MB 1.8s
+2025-10-13 19:21:31.113Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 135.41MB / 165.26MB 1.9s
+2025-10-13 19:21:31.213Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 150.99MB / 165.26MB 2.0s
+2025-10-13 19:21:31.412Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 165.26MB / 165.26MB 2.2s
+2025-10-13 19:21:33.311Z: #10 sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 165.26MB / 165.26MB 4.0s done
+2025-10-13 19:21:33.450Z: #10 extracting sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 0.1s2025-10-13 19:21:33.451Z: 
+2025-10-13 19:21:38.646Z: #10 extracting sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 5.3s2025-10-13 19:21:38.647Z: 
+2025-10-13 19:21:38.949Z: #10 extracting sha256:f76ba238a84a63b71e658023be058526928f3de0dcb19747c2a10d5a20567f04 5.5s done2025-10-13 19:21:38.949Z: 
+2025-10-13 19:21:40.891Z: #10 extracting sha256:5433a31b7d4e549851b2b1b22b37d84ace4122c21d1306cabef775c79b768e9d
+2025-10-13 19:21:41.043Z: #10 extracting sha256:5433a31b7d4e549851b2b1b22b37d84ace4122c21d1306cabef775c79b768e9d done
+2025-10-13 19:21:45.416Z: #10 DONE 16.2s
+2025-10-13 19:21:45.695Z: 
+#11 [dev_containers_target_stage 2/6] RUN mkdir -p /tmp/dev-container-features2025-10-13 19:21:45.697Z: 
+2025-10-13 19:21:45.932Z: #11 ...
+
+#12 [dev_containers_feature_content_normalize 2/3] COPY --from=dev_containers_feature_content_source devcontainer-features.builtin.env /tmp/build-features/
+#12 DONE 0.1s
+2025-10-13 19:21:46.079Z: 
+#13 [dev_containers_feature_content_normalize 3/3] RUN chmod -R 0755 /tmp/build-features/
+2025-10-13 19:21:46.207Z: #13 DONE 0.4s
+
+#11 [dev_containers_target_stage 2/6] RUN mkdir -p /tmp/dev-container-features
+2025-10-13 19:21:46.314Z: #11 DONE 0.5s
+
+#14 [dev_containers_target_stage 3/6] COPY --from=dev_containers_feature_content_normalize /tmp/build-features/ /tmp/dev-container-features
+#14 DONE 0.1s
+2025-10-13 19:21:46.468Z: 
+#15 [dev_containers_target_stage 4/6] RUN echo "_CONTAINER_USER_HOME=$( (command -v getent >/dev/null 2>&1 && getent passwd 'root' || grep -E '^root|^[^:]*:[^:]*:root:' /etc/passwd || ********) | cut -d: -f6)" >> /tmp/dev-container-features/devcontainer-features.builtin.env && echo "_REMOTE_USER_HOME=$( (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || ********) | cut -d: -f6)" >> /tmp/dev-container-features/devcontainer-features.builtin.env
+2025-10-13 19:21:46.530Z: #15 DONE 0.2s
+2025-10-13 19:21:46.681Z: 
+2025-10-13 19:21:46.681Z: #16 [dev_containers_target_stage 5/6] RUN --mount=type=bind,from=dev_containers_feature_content_source,source=common-utils_0,target=/tmp/build-features-src/common-utils_0     cp -ar /tmp/build-features-src/common-utils_0 /tmp/dev-container-features  && chmod -R 0755 /tmp/dev-container-features/common-utils_0  && cd /tmp/dev-container-features/common-utils_0  && chmod +x ./devcontainer-features-install.sh  && ./devcontainer-features-install.sh  && rm -rf /tmp/dev-container-features/common-utils_0
+2025-10-13 19:21:46.733Z: #16 0.221 ===========================================================================
+#16 0.221 Feature       : Common Utilities
+2025-10-13 19:21:46.815Z: #16 0.221 Description   : Installs a set of common command line utilities, Oh My Zsh!, and sets up a non-root user.
+#16 0.221 Id            : ghcr.io/devcontainers/features/common-utils
+#16 0.221 Version       : 2.5.4
+#16 0.221 Documentation : ********/devcontainers/features/tree/main/src/common-utils
+#16 0.221 Options       :
+#16 0.221     INSTALLZSH="********"
+#16 0.221     CONFIGUREZSHASDEFAULTSHELL="false"
+#16 0.221     INSTALLOHMYZSH="********"
+#16 0.221     INSTALLOHMYZSHCONFIG="********"
+#16 0.221     UPGRADEPACKAGES="********"
+#16 0.221     USERNAME="vscode"
+#16 0.221     USERUID="automatic"
+#16 0.221     USERGID="automatic"
+#16 0.221     NONFREEPACKAGES="false"
+#16 0.221 ===========================================================================
+#16 0.265 Linux distro arch not supported.
+#16 0.266 ERROR: Feature "Common Utilities" (ghcr.io/devcontainers/features/common-utils) failed to install! Look at the documentation at ********/devcontainers/features/tree/main/src/common-utils for help troubleshooting this error.
+#16 ERROR: process "/bin/sh -c cp -ar /tmp/build-features-src/common-utils_0 /tmp/dev-container-features  && chmod -R 0755 /tmp/dev-container-features/common-utils_0  && cd /tmp/dev-container-features/common-utils_0  && chmod +x ./devcontainer-features-install.sh  && ./devcontainer-features-install.sh  && rm -rf /tmp/dev-container-features/common-utils_0" did not complete successfully: exit code: 1
+------
+ > [dev_containers_target_stage 5/6] RUN --mount=type=bind,from=dev_containers_feature_content_source,source=common-utils_0,target=/tmp/build-features-src/common-utils_0     cp -ar /tmp/build-features-src/common-utils_0 /tmp/dev-container-features  && chmod -R 0755 /tmp/dev-container-features/common-utils_0  && cd /tmp/dev-container-features/common-utils_0  && chmod +x ./devcontainer-features-install.sh  && ./devcontainer-features-install.sh  && rm -rf /tmp/dev-container-features/common-utils_0:
+0.221     INSTALLOHMYZSH="********"
+0.221     INSTALLOHMYZSHCONFIG="********"
+0.221     UPGRADEPACKAGES="********"
+0.221     USERNAME="vscode"
+0.221     USERUID="automatic"
+0.221     USERGID="automatic"
+0.221     NONFREEPACKAGES="false"
+0.221 ===========================================================================
+0.265 Linux distro arch not supported.
+0.266 ERROR: Feature "Common Utilities" (ghcr.io/devcontainers/features/common-utils) failed to install! Look at the documentation at ********/devcontainers/features/tree/main/src/common-utils for help troubleshooting this error.
+------
+2025-10-13 19:21:46.834Z: Dockerfile.extended:24
+--------------------
+  23 |     
+  24 | >>> RUN --mount=type=bind,from=dev_containers_feature_content_source,source=common-utils_0,target=/tmp/build-features-src/common-utils_0 \
+  25 | >>>     cp -ar /tmp/build-features-src/common-utils_0 /tmp/dev-container-features \
+  26 | >>>  && chmod -R 0755 /tmp/dev-container-features/common-utils_0 \
+  27 | >>>  && cd /tmp/dev-container-features/common-utils_0 \
+  28 | >>>  && chmod +x ./devcontainer-features-install.sh \
+  29 | >>>  && ./devcontainer-features-install.sh \
+  30 | >>>  && rm -rf /tmp/dev-container-features/common-utils_0
+  31 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c cp -ar /tmp/build-features-src/common-utils_0 /tmp/dev-container-features  && chmod -R 0755 /tmp/dev-container-features/common-utils_0  && cd /tmp/dev-container-features/common-utils_0  && chmod +x ./devcontainer-features-install.sh  && ./devcontainer-features-install.sh  && rm -rf /tmp/dev-container-features/common-utils_0" did not complete successfully: exit code: 1
+2025-10-13 19:21:46.847Z: Stop: Run: docker buildx build --load --build-context dev_containers_feature_content_source=/tmp/devcontainercli-root/container-features/0.80.0-1760383286265 --build-arg _DEV_CONTAINERS_BASE_IMAGE=archlinux:latest --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /tmp/devcontainercli-root/container-features/0.80.0-1760383286265/Dockerfile.extended -t vsc-galactica-48318500f38e7126a2f9a98460b7b0f6be1462d7706e785ccc1645d2b449dc4d-features /var/lib/docker/codespacemount/.persistedshare/empty-folder
+2025-10-13 19:21:46.848Z: Error: Command failed: docker buildx build --load --build-context dev_containers_feature_content_source=/tmp/devcontainercli-root/container-features/0.80.0-1760383286265 --build-arg _DEV_CONTAINERS_BASE_IMAGE=archlinux:latest --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /tmp/devcontainercli-root/container-features/0.80.0-1760383286265/Dockerfile.extended -t vsc-galactica-48318500f38e7126a2f9a98460b7b0f6be1462d7706e785ccc1645d2b449dc4d-features /var/lib/docker/codespacemount/.persistedshare/empty-folder
+2025-10-13 19:21:46.848Z:     at w6 (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:467:1253)
+2025-10-13 19:21:46.848Z:     at ax (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:467:997)
+2025-10-13 19:21:46.850Z: {"outcome":"error","message":"Command failed: docker buildx build --load --build-context dev_containers_feature_content_source=/tmp/devcontainercli-root/container-features/0.80.0-1760383286265 --build-arg _DEV_CONTAINERS_BASE_IMAGE=archlinux:latest --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /tmp/devcontainercli-root/container-features/0.80.0-1760383286265/Dockerfile.extended -t vsc-galactica-48318500f38e7126a2f9a98460b7b0f6be1462d7706e785ccc1645d2b449dc4d-features /var/lib/docker/codespacemount/.persistedshare/empty-folder","description":"An error occurred setting up the container."}
+2025-10-13 19:21:46.852Z:     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-13 19:21:46.852Z:     at async Y6 (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:484:3842)
+2025-10-13 19:21:46.852Z:     at async BC (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:484:4957)
+2025-10-13 19:21:46.852Z:     at async p7 (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:665:202)
+2025-10-13 19:21:46.854Z:     at async d7 (/.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:664:14804)
+2025-10-13 19:21:46.856Z:     at async /.codespaces/agent/bin/node_modules/@devcontainers/cli/dist/spec-node/devContainersSpecCLI.js:484:1188
+2025-10-13 19:21:46.857Z: devcontainer process exited with exit code 1
+
+====================================== ERROR ====================================
+2025-10-13 19:21:46.865Z: Failed to create container.
+=================================================================================
+2025-10-13 19:21:46.865Z: Error: Command failed: docker buildx build --load --build-context dev_containers_feature_content_source=/tmp/devcontainercli-root/container-features/0.80.0-1760383286265 --build-arg _DEV_CONTAINERS_BASE_IMAGE=archlinux:latest --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /tmp/devcontainercli-root/container-features/0.80.0-1760383286265/Dockerfile.extended -t vsc-galactica-48318500f38e7126a2f9a98460b7b0f6be1462d7706e785ccc1645d2b449dc4d-features /var/lib/docker/codespacemount/.persistedshare/empty-folder
+2025-10-13 19:21:46.870Z: Error code: 1302 (UnifiedContainersErrorFatalCreatingContainer)
+
+====================================== ERROR ====================================
+2025-10-13 19:21:46.877Z: Container creation failed.
+=================================================================================
+2025-10-13 19:21:46.888Z: 
+
+===================================== WARNING ===================================
+2025-10-13 19:21:46.889Z: Creating recovery container.
+=================================================================================
+
+=================================================================================
+2025-10-13 19:22:05.165Z: Creating container...
+2025-10-13 19:22:05.195Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/Galactica --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --skip-post-create --config "/var/lib/docker/codespacemount/workspace/Galactica/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2025-10-13 19:22:05.333Z: @devcontainers/cli 0.80.0. Node.js v18.20.6. linux 6.8.0-1030-azure x64.
+2025-10-13 19:22:05.811Z: $alpine -c echo Container started
+2025-10-13 19:22:05.829Z: Unable to find image 'mcr.microsoft.com/devcontainers/base:alpine' locally
+2025-10-13 19:22:05.962Z: alpine: Pulling from devcontainers/base
+2025-10-13 19:22:06.012Z: 
+2025-10-13 19:22:06.012Z: [1A[2K9824c27679d3: Pulling fs layer [1B
+[1A[2K64460e5168e0: Pulling fs layer [1B
+[1A[2K44c75e786264: Pulling fs layer [1B
+[1A[2Ka63fa575778c: Pulling fs layer [1B
+[1A[2K85553cdd1418: Pulling fs layer [1B
+[1A[2Kba79d01ae1c8: Pulling fs layer [1B
+[1A[2K7add29b687fa: Pulling fs layer [1B[4A[2Ka63fa575778c: Waiting [4B[3A[2K85553cdd1418: Waiting [3B[2A[2Kba79d01ae1c8: Waiting [2B[1A[2K7add29b687fa: Waiting [1B2025-10-13 19:22:06.085Z: [5A[2K44c75e786264: Downloading     135B/135B[5B[5A2025-10-13 19:22:06.085Z: [2K44c75e786264: 2025-10-13 19:22:06.085Z: Verifying Checksum [5B[5A[2K44c75e786264: Download complete [5B2025-10-13 19:22:06.114Z: [7A[2K9824c27679d3: 2025-10-13 19:22:06.114Z: Downloading  48.34kB/3.8MB[7B2025-10-13 19:22:06.133Z: [6A[2K64460e5168e0: Downloading     408B/408B[6B2025-10-13 19:22:06.133Z: [6A[2K2025-10-13 19:22:06.134Z: 64460e5168e0: Verifying Checksum [6B[6A[2K64460e5168e0: Download complete [6B2025-10-13 19:22:06.143Z: [7A[2K9824c27679d3: Verifying Checksum [7B[7A[2K9824c27679d3: Download complete [7B2025-10-13 19:22:06.147Z: [4A2025-10-13 19:22:06.150Z: [2Ka63fa575778c: Downloading     223B/223B[4B[7A[2K9824c27679d3: Extracting  65.54kB/3.8MB[7B2025-10-13 19:22:06.151Z: [4A[2Ka63fa575778c: Verifying Checksum [4B[4A[2Ka63fa575778c: Download complete [4B2025-10-13 19:22:06.204Z: [3A[2K85553cdd1418: Downloading     233B/233B[3B[3A[2K85553cdd1418: Verifying Checksum [3B[3A[2K85553cdd1418: Download complete [3B2025-10-13 19:22:06.225Z: [2A[2Kba79d01ae1c8: 2025-10-13 19:22:06.226Z: Downloading  538.7kB/206.1MB[2B2025-10-13 19:22:06.251Z: [7A[2K9824c27679d3: Extracting  1.311MB/3.8MB[7B2025-10-13 19:22:06.281Z: [1A2025-10-13 19:22:06.281Z: [2K7add29b687fa: Downloading  440.4kB/42.49MB[1B2025-10-13 19:22:06.328Z: [2A[2Kba79d01ae1c8: Downloading  19.99MB/206.1MB[2B2025-10-13 19:22:06.355Z: [7A2025-10-13 19:22:06.358Z: [2K9824c27679d3: Extracting  2.097MB/3.8MB[7B2025-10-13 19:22:06.379Z: [1A[2K7add29b687fa: Downloading   16.2MB/42.49MB[1B2025-10-13 19:22:06.431Z: [2A2025-10-13 19:22:06.433Z: [2Kba79d01ae1c8: Downloading  37.29MB/206.1MB[2B2025-10-13 19:22:06.456Z: [7A[2K9824c27679d3: Extracting  3.604MB/3.8MB[7B2025-10-13 19:22:06.489Z: [7A[2K9824c27679d3: Extracting    3.8MB/3.8MB[7B2025-10-13 19:22:06.491Z: [1A[2K7add29b687fa: Downloading   37.5MB/42.49MB[1B2025-10-13 19:22:06.499Z: [1A[2K7add29b687fa: Verifying Checksum [1B2025-10-13 19:22:06.499Z: [1A[2K7add29b687fa: Download complete [1B2025-10-13 19:22:06.533Z: [2A[2K2025-10-13 19:22:06.534Z: ba79d01ae1c8: Downloading  58.92MB/206.1MB[2B2025-10-13 19:22:06.541Z: [7A[2K9824c27679d3: Pull complete [7B2025-10-13 19:22:06.547Z: [6A2025-10-13 19:22:06.549Z: [2K64460e5168e0: Extracting     408B/408B[6B[6A2025-10-13 19:22:06.550Z: [2K64460e5168e0: Extracting     408B/408B[6B2025-10-13 19:22:06.643Z: [2A[2Kba79d01ae1c8: Downloading  67.57MB/206.1MB[2B2025-10-13 19:22:07.039Z: [2A[2Kba79d01ae1c8: Downloading  79.46MB/206.1MB[2B2025-10-13 19:22:07.137Z: [2A[2Kba79d01ae1c8: Downloading  98.39MB/206.1MB2025-10-13 19:22:07.137Z: [2B2025-10-13 19:22:07.240Z: [2A[2K2025-10-13 19:22:07.241Z: ba79d01ae1c8: Downloading  117.3MB/206.1MB[2B2025-10-13 19:22:07.342Z: [2A[2Kba79d01ae1c8: Downloading  137.3MB/206.1MB[2B2025-10-13 19:22:07.442Z: [2A[2Kba79d01ae1c8: Downloading  155.7MB/206.1MB[2B2025-10-13 19:22:07.543Z: [2A[2Kba79d01ae1c8: Downloading  174.1MB/206.1MB[2B2025-10-13 19:22:07.645Z: [2A2025-10-13 19:22:07.645Z: [2Kba79d01ae1c8: Downloading  193.5MB/206.1MB[2B2025-10-13 19:22:07.713Z: [2A2025-10-13 19:22:07.715Z: [2Kba79d01ae1c8: Verifying Checksum [2B[2A[2Kba79d01ae1c8: Download complete [2B2025-10-13 19:22:08.122Z: [6A[2K2025-10-13 19:22:08.124Z: 64460e5168e0: Pull complete [6B2025-10-13 19:22:08.127Z: [5A2025-10-13 19:22:08.127Z: [2K44c75e786264: Extracting     135B/135B[5B2025-10-13 19:22:08.129Z: [5A[2K44c75e786264: Extracting     135B/135B[5B2025-10-13 19:22:09.701Z: [5A[2K44c75e786264: Pull complete [5B2025-10-13 19:22:09.705Z: [4A[2Ka63fa575778c: Extracting     223B/223B[4B2025-10-13 19:22:09.706Z: [4A[2Ka63fa575778c: Extracting     223B/223B[4B2025-10-13 19:22:09.729Z: [4A[2Ka63fa575778c: Pull complete [4B2025-10-13 19:22:09.733Z: [3A[2K85553cdd1418: Extracting     233B/233B[3B[3A[2K85553cdd1418: Extracting     233B/233B[3B2025-10-13 19:22:09.753Z: [3A[2K85553cdd1418: Pull complete [3B2025-10-13 19:22:09.776Z: [2A[2Kba79d01ae1c8: Extracting  557.1kB/206.1MB[2B2025-10-13 19:22:09.880Z: [2A2025-10-13 19:22:09.880Z: [2Kba79d01ae1c8: Extracting  5.014MB/206.1MB2025-10-13 19:22:09.881Z: [2B2025-10-13 19:22:09.981Z: [2A2025-10-13 19:22:09.981Z: [2Kba79d01ae1c8: Extracting  12.81MB/206.1MB[2B2025-10-13 19:22:10.084Z: [2A[2Kba79d01ae1c8: Extracting  20.05MB/206.1MB[2B2025-10-13 19:22:10.200Z: [2A2025-10-13 19:22:10.201Z: [2Kba79d01ae1c8: Extracting  23.95MB/206.1MB[2B2025-10-13 19:22:10.307Z: [2A2025-10-13 19:22:10.307Z: [2Kba79d01ae1c8: Extracting  25.07MB/206.1MB[2B2025-10-13 19:22:10.414Z: [2A[2K2025-10-13 19:22:10.415Z: ba79d01ae1c8: Extracting  25.62MB/206.1MB[2B2025-10-13 19:22:10.565Z: [2A[2Kba79d01ae1c8: Extracting  26.74MB/206.1MB[2B2025-10-13 19:22:10.672Z: [2A[2Kba79d01ae1c8: Extracting   27.3MB/206.1MB[2B2025-10-13 19:22:10.781Z: [2A2025-10-13 19:22:10.781Z: [2Kba79d01ae1c8: Extracting  30.64MB/206.1MB[2B2025-10-13 19:22:10.885Z: [2A[2Kba79d01ae1c8: Extracting  32.87MB/206.1MB[2B2025-10-13 19:22:10.992Z: [2A[2Kba79d01ae1c8: Extracting  40.67MB/206.1MB[2B2025-10-13 19:22:11.100Z: [2A[2Kba79d01ae1c8: Extracting  47.35MB/206.1MB[2B2025-10-13 19:22:11.207Z: [2A2025-10-13 19:22:11.208Z: [2Kba79d01ae1c8: Extracting  52.92MB/206.1MB[2B2025-10-13 19:22:11.319Z: [2A[2Kba79d01ae1c8: Extracting  57.38MB/206.1MB[2B2025-10-13 19:22:11.420Z: [2A2025-10-13 19:22:11.420Z: [2Kba79d01ae1c8: Extracting  60.72MB/206.1MB[2B2025-10-13 19:22:11.534Z: [2A[2K2025-10-13 19:22:11.535Z: ba79d01ae1c8: Extracting  64.06MB/206.1MB[2B2025-10-13 19:22:11.634Z: [2A[2Kba79d01ae1c8: Extracting  70.75MB/206.1MB[2B2025-10-13 19:22:11.741Z: [2A2025-10-13 19:22:11.742Z: [2Kba79d01ae1c8: Extracting   79.1MB/206.1MB[2B2025-10-13 19:22:11.852Z: [2A[2Kba79d01ae1c8: Extracting  81.33MB/206.1MB[2B2025-10-13 19:22:11.960Z: [2A[2Kba79d01ae1c8: Extracting  85.23MB/206.1MB[2B2025-10-13 19:22:12.094Z: [2A[2Kba79d01ae1c8: Extracting  87.46MB/206.1MB[2B2025-10-13 19:22:12.225Z: [2A2025-10-13 19:22:12.225Z: [2Kba79d01ae1c8: Extracting  89.13MB/206.1MB[2B2025-10-13 19:22:12.326Z: [2A[2Kba79d01ae1c8: Extracting  95.26MB/206.1MB[2B2025-10-13 19:22:12.434Z: [2A[2Kba79d01ae1c8: Extracting  102.5MB/206.1MB[2B2025-10-13 19:22:12.535Z: [2A2025-10-13 19:22:12.535Z: [2Kba79d01ae1c8: Extracting  109.7MB/206.1MB[2B2025-10-13 19:22:12.637Z: [2A[2K2025-10-13 19:22:12.639Z: ba79d01ae1c8: Extracting    117MB/206.1MB[2B2025-10-13 19:22:12.744Z: [2A2025-10-13 19:22:12.744Z: [2Kba79d01ae1c8: Extracting  122.6MB/206.1MB[2B2025-10-13 19:22:12.845Z: [2A2025-10-13 19:22:12.845Z: [2Kba79d01ae1c8: Extracting  130.4MB/206.1MB[2B2025-10-13 19:22:12.954Z: [2A[2Kba79d01ae1c8: Extracting  134.3MB/206.1MB[2B2025-10-13 19:22:13.075Z: [2A[2Kba79d01ae1c8: Extracting  135.9MB/206.1MB[2B2025-10-13 19:22:14.465Z: [2A[2Kba79d01ae1c8: Extracting  137.6MB/206.1MB[2B2025-10-13 19:22:14.568Z: [2A[2Kba79d01ae1c8: Extracting  143.7MB/206.1MB[2B2025-10-13 19:22:14.672Z: [2A[2Kba79d01ae1c8: 2025-10-13 19:22:14.672Z: Extracting  151.5MB/206.1MB[2B2025-10-13 19:22:14.774Z: [2A[2Kba79d01ae1c8: Extracting  158.8MB/206.1MB[2B2025-10-13 19:22:14.879Z: [2A[2Kba79d01ae1c8: Extracting  166.6MB/206.1MB[2B2025-10-13 19:22:14.986Z: [2A[2Kba79d01ae1c8: Extracting  174.9MB/206.1MB[2B2025-10-13 19:22:15.084Z: [2A[2Kba79d01ae1c8: Extracting  182.2MB/206.1MB[2B2025-10-13 19:22:15.187Z: [2A2025-10-13 19:22:15.188Z: [2Kba79d01ae1c8: Extracting  189.4MB/206.1MB[2B2025-10-13 19:22:15.318Z: [2A2025-10-13 19:22:15.319Z: [2Kba79d01ae1c8: Extracting    195MB/206.1MB[2B2025-10-13 19:22:15.447Z: [2A2025-10-13 19:22:15.447Z: [2Kba79d01ae1c8: Extracting  196.1MB/206.1MB[2B2025-10-13 19:22:15.590Z: [2A2025-10-13 19:22:15.590Z: [2Kba79d01ae1c8: 2025-10-13 19:22:15.590Z: Extracting  197.8MB/206.1MB[2B2025-10-13 19:22:15.734Z: [2A2025-10-13 19:22:15.735Z: [2Kba79d01ae1c8: Extracting  199.4MB/206.1MB[2B2025-10-13 19:22:15.872Z: [2A[2Kba79d01ae1c8: Extracting    200MB/206.1MB2025-10-13 19:22:15.873Z: [2B2025-10-13 19:22:15.975Z: [2A2025-10-13 19:22:15.975Z: [2Kba79d01ae1c8: Extracting  201.1MB/206.1MB[2B2025-10-13 19:22:16.244Z: [2A[2K2025-10-13 19:22:16.245Z: ba79d01ae1c8: Extracting  201.7MB/206.1MB[2B2025-10-13 19:22:16.353Z: [2A2025-10-13 19:22:16.355Z: [2Kba79d01ae1c8: Extracting  202.8MB/206.1MB[2B2025-10-13 19:22:16.579Z: [2A2025-10-13 19:22:16.579Z: [2Kba79d01ae1c8: Extracting  203.3MB/206.1MB[2B2025-10-13 19:22:16.789Z: [2A2025-10-13 19:22:16.790Z: [2Kba79d01ae1c8: Extracting  203.9MB/206.1MB[2B2025-10-13 19:22:16.803Z: [2A[2Kba79d01ae1c8: Extracting  206.1MB/206.1MB[2B2025-10-13 19:22:22.529Z: [2A[2Kba79d01ae1c8: 2025-10-13 19:22:22.530Z: Pull complete [2B2025-10-13 19:22:22.545Z: [1A2025-10-13 19:22:22.546Z: [2K7add29b687fa: Extracting    426kB/42.49MB[1B2025-10-13 19:22:22.645Z: [1A2025-10-13 19:22:22.646Z: [2K7add29b687fa: Extracting  2.556MB/42.49MB[1B2025-10-13 19:22:22.790Z: [1A2025-10-13 19:22:22.791Z: [2K7add29b687fa: Extracting  5.538MB/42.49MB[1B2025-10-13 19:22:22.925Z: [1A[2K7add29b687fa: Extracting  5.964MB/42.49MB[1B2025-10-13 19:22:23.030Z: [1A[2K7add29b687fa: Extracting   8.52MB/42.49MB[1B2025-10-13 19:22:23.166Z: [1A[2K7add29b687fa: Extracting  12.78MB/42.49MB[1B2025-10-13 19:22:23.307Z: [1A[2K7add29b687fa: 2025-10-13 19:22:23.307Z: Extracting  13.21MB/42.49MB[1B2025-10-13 19:22:23.416Z: [1A[2K7add29b687fa: Extracting  15.76MB/42.49MB[1B2025-10-13 19:22:23.515Z: [1A2025-10-13 19:22:23.516Z: [2K7add29b687fa: Extracting  21.73MB/42.49MB[1B2025-10-13 19:22:23.623Z: [1A[2K7add29b687fa: Extracting  28.11MB/42.49MB[1B2025-10-13 19:22:23.927Z: [1A[2K7add29b687fa: Extracting  30.67MB/42.49MB[1B2025-10-13 19:22:24.147Z: [1A[2K2025-10-13 19:22:24.148Z: 7add29b687fa: Extracting  31.95MB/42.49MB[1B2025-10-13 19:22:24.355Z: [1A[2K7add29b687fa: Extracting   32.8MB/42.49MB[1B2025-10-13 19:22:24.508Z: [1A[2K7add29b687fa: Extracting  34.08MB/42.49MB[1B2025-10-13 19:22:24.741Z: [1A[2K7add29b687fa: Extracting  37.49MB/42.49MB[1B2025-10-13 19:22:24.875Z: [1A[2K7add29b687fa: Extracting  40.47MB/42.49MB[1B2025-10-13 19:22:25.022Z: [1A[2K7add29b687fa: Extracting  41.75MB/42.49MB[1B2025-10-13 19:22:25.197Z: [1A[2K7add29b687fa: 2025-10-13 19:22:25.197Z: Extracting  42.49MB/42.49MB[1B2025-10-13 19:22:26.786Z: [1A[2K2025-10-13 19:22:26.787Z: 7add29b687fa: Pull complete [1B2025-10-13 19:22:26.793Z: Digest: sha256:1f8a1ea669115b1c87835427e89f6278f58a934a2e3f20eca3af7b6366ee5af22025-10-13 19:22:26.794Z: 
+2025-10-13 19:22:26.798Z: Status: Downloaded newer image for mcr.microsoft.com/devcontainers/base:alpine
+2025-10-13 19:22:26.944Z: Container started
+2025-10-13 19:22:27.147Z: Outcome: success User: vscode WorkspaceFolder: /workspaces/Galactica
+2025-10-13 19:22:27.157Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2025-10-13 19:22:29.347Z: Running blocking commands...
+2025-10-13 19:22:29.375Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/Galactica --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --expect-existing-container --config "/var/lib/docker/codespacemount/workspace/Galactica/.devcontainer/devcontainer.json" --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2025-10-13 19:22:29.517Z: @devcontainers/cli 0.80.0. Node.js v18.20.6. linux 6.8.0-1030-azure x64.
+2025-10-13 19:22:29.934Z: Outcome: success User: vscode WorkspaceFolder: /workspaces/Galactica
+2025-10-13 19:22:29.943Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2025-10-13 19:22:29.953Z: Configuring codespace...
+
+=================================================================================
+2025-10-13 19:22:29.957Z: Finished configuring codespace.

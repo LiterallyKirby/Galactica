@@ -1,0 +1,1 @@
+Simply wget/curl the installer from this repo and run it
