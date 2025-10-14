@@ -307,20 +307,19 @@ class HiddenVolumeManager:
                 child.sendline(outer_pass)
                 
                 # Confirm outer password
-                child.expect('Re-enter passphrase:')
+                child.expect('Repeat passphrase:')
                 child.sendline(outer_pass)
                 
                 # Wait for hidden password prompt
-                child.expect('Enter passphrase for hidden volume:')
+                child.expect('Passphrase for hidden volume:')
                 child.sendline(hidden_pass)
                 
                 # Confirm hidden password
-                child.expect('Re-enter passphrase for hidden volume:')
+                child.expect('Repeat passphrase:')
                 child.sendline(hidden_pass)
                 
                 # Wait for completion
-                child.expect(pexpect.EOF)
-                child.close()
+               
                 
                 if child.exitstatus == 0:
                     print("\n✅ Hidden volume created successfully")
