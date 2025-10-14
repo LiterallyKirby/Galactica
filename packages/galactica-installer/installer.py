@@ -281,7 +281,7 @@ class HiddenVolumeManager:
                 print("Installing tcplay...")
                 subprocess.run(['pacman', '-Sy', '--noconfirm', 'tcplay'], check=True)
             
-            # Create hidden volume
+            # Create hidden volume using tcplay interactive mode
             cmd = [
                 'tcplay',
                 '--create',
@@ -291,31 +291,114 @@ class HiddenVolumeManager:
                 '--hidden'
             ]
             
+            print("  📝 Enter passwords when prompted:")
+            print("    1. Outer password")
+            print("    2. Confirm outer password")
+            print("    3. Hidden password")
+            print("    4. Confirm hidden password")
+            
+            # Run tcplay interactively - let user enter passwords directly
             proc = subprocess.Popen(
                 cmd,
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
-                text=True
+                text=True,
+                bufsize=1
             )
             
-            # Send passwords: outer (2x), then hidden (2x)
-            input_data = f"{outer_pass}\n{outer_pass}\n{hidden_pass}\n{hidden_pass}\n"
-            stdout, stderr = proc.communicate(input=input_data, timeout=300)
-            
-            if proc.returncode != 0:
-                self.logger.error(f"Hidden volume creation failed: {stderr}")
+            try:
+                # Create input with all four passwords
+                input_data = f"{outer_pass}\n{outer_pass}\n{hidden_pass}\n{hidden_pass}\n"
+                
+                stdout, stderr = proc.communicate(input=input_data, timeout=600)
+                
+                if proc.returncode != 0:
+                    self.logger.error(f"Hidden volume creation failed: {stderr}")
+                    print(f"❌ tcplay error: {stderr}")
+                    return False
+                
+                if "successfully" not in stdout.lower() and proc.returncode == 0:
+                    print(f"⚠️  tcplay output: {stdout}")
+                
+            except subprocess.TimeoutExpired:
+                proc.kill()
+                proc.wait()
+                self.logger.error("Hidden volume creation timed out")
+                print("❌ Hidden volume creation timed out (>600 seconds)")
                 return False
             
             print("✅ Hidden volume created successfully")
             return True
             
-        except subprocess.TimeoutExpired:
-            proc.kill()
-            self.logger.error("Hidden volume creation timed out")
-            return False
         except Exception as e:
             self.logger.error(f"Hidden volume setup failed: {e}")
+            print(f"❌ Error: {e}")
+            return False
+    
+    def open_hidden_volume(self, password: str, mapper_name: str = "cryptroot") -> bool:
+        """Open hidden volume"""
+        try:
+            print(f"\n🔓 Opening hidden volume as '{mapper_name}'...")
+            
+            cmd = [
+                'tcplay',
+                '--map=' + mapper_name,
+                '--device=' + self.partition
+            ]
+            
+            # For hidden volumes, tcplay will prompt which volume to open
+            # We need to provide the password interactively
+            proc = subprocess.Popen(
+                cmd,
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                bufsize=1
+            )
+            
+            stdout, stderr = proc.communicate(input=f"{password}\n", timeout=60)
+            
+            if proc.returncode != 0:
+                self.logger.error(f"Failed to open hidden volume: {stderr}")
+                print(f"❌ Failed to open hidden volume: {stderr}")
+                return False
+            
+            # Verify mapper device exists
+            mapper_path = f"/dev/mapper/{mapper_name}"
+            time.sleep(1)  # Give device time to appear
+            
+            if not os.path.exists(mapper_path):
+                self.logger.error(f"Mapper device {mapper_path} not found after opening")
+                print(f"❌ Mapper device {mapper_path} not created")
+                return False
+            
+            # Verify it's accessible
+            result = subprocess.run(
+                ['blockdev', '--getsize', mapper_path],
+                capture_output=True,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                self.logger.error("Mapper device is not accessible")
+                return False
+            
+            print(f"✅ Hidden volume opened successfully")
+            print(f"   Device: {mapper_path}")
+            print(f"   Size: {result.stdout.strip()} blocks")
+            
+            self.logger.info("Hidden volume opened successfully")
+            return True
+            
+        except subprocess.TimeoutExpired:
+            print("❌ Hidden volume open timed out")
+            self.logger.error("Hidden volume open timed out")
+            return False
+        except Exception as e:
+            self.logger.error(f"Failed to open hidden volume: {e}")
+            print(f"❌ Error opening hidden volume: {e}")
             return False
     
     def open_hidden_volume(self, password: str, mapper_name: str = "cryptroot") -> bool:
