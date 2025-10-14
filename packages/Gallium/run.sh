@@ -1,48 +1,23 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 
+BUILD_DIR="build"
 
-echo "----------------------------------"
-echo "         Gallium Start!           " 
-echo "----------------------------------"
-
-# Check dependencies
-command -v cargo >/dev/null 2>&1 || {
-    echo "❌ Cargo not found. Install Rust first."
-    exit 1
-}
-
-command -v glxinfo >/dev/null 2>&1 || {
-    echo "⚠️  glxinfo not found. Install mesa-utils for driver checks."
-}
-
-# Force software rendering
+# Software rendering
 export LIBGL_ALWAYS_SOFTWARE=1
 export GALLIUM_DRIVER=llvmpipe
-export LIBGL_DEBUG=verbose
-export RUST_BACKTRACE=1
+export WLR_RENDERER_ALLOW_SOFTWARE=1
+export XDG_RUNTIME_DIR=/tmp/xdg-run-$$
+mkdir -p "$XDG_RUNTIME_DIR"
 
-# Optional: more Mesa debug output
-# export MESA_DEBUG=1
-
-# Clean + build release
-echo "🧹 Cleaning build..."
-cargo clean
-
-echo "🛠️  Building Gallium compositor..."
-cargo build --release
-
-echo "🧪 Checking Mesa renderer..."
-if command -v glxinfo >/dev/null 2>&1; then
-    glxinfo | grep "OpenGL renderer" || echo "⚠️  Could not verify renderer."
+# Setup Meson
+if [ ! -f "$BUILD_DIR/build.ninja" ]; then
+    meson setup "$BUILD_DIR"
 fi
 
-echo "🔥 Running compositor..."
-echo
-./target/release/Galium 2>&1 | tee gallium.log
+# Build
+ninja -C "$BUILD_DIR"
 
-echo
-echo "----------------------------------"
-echo " Gallium compositor exited."
-echo " Log saved to gallium.log"
-echo "----------------------------------"
+# Run
+echo "✅ Launching Galium-vanilla compositor"
+"$BUILD_DIR/galium-vanilla"

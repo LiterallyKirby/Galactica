@@ -1,0 +1,21 @@
+=================================
+  Galium-Vanilla Compositor
+  Software Rendering Edition
+=================================
+
+✓ Memory locked (no swapping)
+✓ Security context created (session: 0xe076d40a2f11fa14)
+✓ Wayland socket: wayland-0
+✓ Set WAYLAND_DISPLAY=wayland-0 to connect
+
+✓ wl_compositor global created
+✓ wl_shm global created
+Creating output: 800x600
+✓ Output created: 800x600 @ 0x55eccf3727f0
+✓ Framebuffer: 1920000 bytes
+
+🚀 Compositor running...
+   WAYLAND_DISPLAY=wayland-0
+   Resolution: 800x600 (software rendered)
+   Press Ctrl+C to stop
+
