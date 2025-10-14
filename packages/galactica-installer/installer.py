@@ -2069,9 +2069,6 @@ NEXT STEPS:
 3. Create app VMs for isolated applications
 4. Configure your compositor and VM manager
 
-For full documentation:
-   https://github.com/yourusername/galactica-os
-
 Stay safe and secure! 🛡️
 
 ═══════════════════════════════════════════════════════════════
