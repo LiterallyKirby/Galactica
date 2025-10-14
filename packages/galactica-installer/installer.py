@@ -303,7 +303,7 @@ class HiddenVolumeManager:
             
             try:
                 # Wait for outer password prompt
-                child.expect('Enter passphrase:')
+                child.expect('Passphrase:')
                 child.sendline(outer_pass)
                 
                 # Confirm outer password
