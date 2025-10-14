@@ -36,14 +36,14 @@ test-vmd:
 # Compositor
 build-compositor:
 	@echo "$(CYAN)Building galactica-compositor...$(RESET)"
-	cd packages/galactica-compositor && cargo build --release
-	@echo "$(GREEN)✅ Built: packages/galactica-compositor/target/release/galactica-compositor$(RESET)"
+	cd packages/Gallium && cargo build --release
+	@echo "$(GREEN)✅ Built!"
 
 dev-compositor:
-	cd packages/galactica-compositor && cargo watch -x 'run'
+	cd packages/Gallium && ./run.sh
 
 test-compositor:
-	cd packages/galactica-compositor && cargo test
+	cd packages/Gallium && cargo test
 
 # All tests
 test: test-vmd test-compositor
