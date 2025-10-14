@@ -596,85 +596,85 @@ class SystemInstaller:
         self.mount_point = Path('/mnt')
     
     def install_base_system(self) -> bool:
-    """Install base packages using pacstrap"""
-    print("\n📦 Installing base system (this will take several minutes)...")
+        """Install base packages using pacstrap"""
+        print("\n📦 Installing base system (this will take several minutes)...")
+        
+        # Base packages (only official repos)
+        packages = [
+            'base', 'base-devel', 'linux-hardened', 'linux-hardened-headers',
+            'linux-firmware', 'intel-ucode', 'amd-ucode',
+            'btrfs-progs', 'dosfstools',
+            'grub', 'efibootmgr',
+            'apparmor', 'audit', 'firejail', 'usbguard',
+            'cryptsetup', 'tpm2-tools', 'sbctl',
+            'networkmanager', 'dnsmasq', 'iptables-nft',
+            'haveged', 'rng-tools',
+            'vim', 'tmux', 'git', 'htop', 'man-db', 'man-pages',
+            'coreutils',  # Includes 'shred' for secure deletion
+        ]
+        
+        try:
+            cmd = ['pacstrap', '-K', str(self.mount_point)] + packages
+            subprocess.run(cmd, check=True)
+            
+            # Install Xen from AUR after base system
+            print("\n📦 Installing Xen from AUR...")
+            self._install_xen_from_aur()
+            
+            self._generate_fstab()
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Base installation failed: {e}")
+            return False
+
+    def _install_xen_from_aur(self):
+        """Install Xen from AUR after chroot"""
+        try:
+            # We'll install it after chroot in a later phase
+            # For now, skip Xen - it can be installed post-installation
+            print("  ⚠️  Xen will be installed in post-installation phase")
+            
+            # Create a post-install script
+            post_install = self.mount_point / 'root' / 'install-xen.sh'
+            with open(post_install, 'w') as f:
+                f.write("""#!/bin/bash
+    # Post-installation Xen setup
     
-    # Base packages (only official repos)
-    packages = [
-        'base', 'base-devel', 'linux-hardened', 'linux-hardened-headers',
-        'linux-firmware', 'intel-ucode', 'amd-ucode',
-        'btrfs-progs', 'dosfstools',
-        'grub', 'efibootmgr',
-        'apparmor', 'audit', 'firejail', 'usbguard',
-        'cryptsetup', 'tpm2-tools', 'sbctl',
-        'networkmanager', 'dnsmasq', 'iptables-nft',
-        'haveged', 'rng-tools',
-        'vim', 'tmux', 'git', 'htop', 'man-db', 'man-pages',
-        'coreutils',  # Includes 'shred' for secure deletion
-    ]
+    echo "Installing Xen from AUR..."
     
-    try:
-        cmd = ['pacstrap', '-K', str(self.mount_point)] + packages
-        subprocess.run(cmd, check=True)
-        
-        # Install Xen from AUR after base system
-        print("\n📦 Installing Xen from AUR...")
-        self._install_xen_from_aur()
-        
-        self._generate_fstab()
-        
-        return True
-        
-    except Exception as e:
-        self.logger.error(f"Base installation failed: {e}")
-        return False
-
-def _install_xen_from_aur(self):
-    """Install Xen from AUR after chroot"""
-    try:
-        # We'll install it after chroot in a later phase
-        # For now, skip Xen - it can be installed post-installation
-        print("  ⚠️  Xen will be installed in post-installation phase")
-        
-        # Create a post-install script
-        post_install = self.mount_point / 'root' / 'install-xen.sh'
-        with open(post_install, 'w') as f:
-            f.write("""#!/bin/bash
-# Post-installation Xen setup
-
-echo "Installing Xen from AUR..."
-
-# Create build user (can't build as root)
-useradd -m -G wheel builduser
-echo "builduser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-# Switch to build user and install yay (AUR helper)
-sudo -u builduser bash << 'EOF'
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
-rm -rf yay
-
-# Install Xen
-yay -S --noconfirm xen
-
-EOF
-
-# Cleanup
-userdel -r builduser
-sed -i '/builduser/d' /etc/sudoers
-
-echo "✅ Xen installed successfully"
-echo "Run after first boot to enable Xen"
-""")
-        
-        os.chmod(post_install, 0o755)
-        print("  ✅ Post-install script created: /root/install-xen.sh")
-        
-    except Exception as e:
-        self.logger.warning(f"Could not create Xen post-install script: {e}")
+    # Create build user (can't build as root)
+    useradd -m -G wheel builduser
+    echo "builduser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+    
+    # Switch to build user and install yay (AUR helper)
+    sudo -u builduser bash << 'EOF'
+    cd /tmp
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf yay
+    
+    # Install Xen
+    yay -S --noconfirm xen
+    
+    EOF
+    
+    # Cleanup
+    userdel -r builduser
+    sed -i '/builduser/d' /etc/sudoers
+    
+    echo "✅ Xen installed successfully"
+    echo "Run after first boot to enable Xen"
+    """)
+            
+            os.chmod(post_install, 0o755)
+            print("  ✅ Post-install script created: /root/install-xen.sh")
+            
+        except Exception as e:
+            self.logger.warning(f"Could not create Xen post-install script: {e}")
     
     def _generate_fstab(self):
         """Generate fstab with security options"""
