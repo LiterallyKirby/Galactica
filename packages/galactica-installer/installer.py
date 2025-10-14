@@ -275,70 +275,43 @@ class HiddenVolumeManager:
         print("  2. HIDDEN (real) - password 2")
         
         try:
-            # Try to import pexpect
-            try:
-                import pexpect
-            except ImportError:
-                print("Installing pexpect...")
-                subprocess.run(['pip', 'install', 'pexpect'], check=True)
-                import pexpect
-            
             # Check if tcplay is available
             result = subprocess.run(['which', 'tcplay'], capture_output=True)
             if result.returncode != 0:
                 print("Installing tcplay...")
                 subprocess.run(['pacman', '-Sy', '--noconfirm', 'tcplay'], check=True)
             
-            print("  ⏳ Creating hidden volume (this may take a minute)...")
+            print("\n" + "="*60)
+            print("🔑 INTERACTIVE TCPLAY SETUP")
+            print("="*60)
+            print("\nYou will now interact with tcplay directly.")
+            print("\nFollowing prompts:")
+            print("  1. Enter OUTER volume passphrase")
+            print("  2. Re-enter OUTER volume passphrase")
+            print("  3. Enter size for HIDDEN volume (e.g., 50%)")
+            print("  4. Enter HIDDEN volume passphrase")
+            print("  5. Re-enter HIDDEN volume passphrase")
+            print("\n⏳ Starting tcplay...\n")
             
-            # Use pexpect to interact with tcplay
-            child = pexpect.spawn(
-                f'tcplay --create --device={self.partition} --cipher=AES-256-XTS --pbkdf-prf=whirlpool --hidden',
-                timeout=700,
-                encoding='utf-8'
-            )
+            # Run tcplay interactively - user types everything
+            cmd = [
+                'tcplay',
+                '--create',
+                f'--device={self.partition}',
+                '--cipher=AES-256-XTS',
+                '--pbkdf-prf=whirlpool',
+                '--hidden'
+            ]
             
-            # Enable logging for debugging
-            child.logfile = sys.stdout
+            result = subprocess.run(cmd)
             
-            try:
-                # Wait for outer password prompt
-                child.expect('Passphrase:')
-                child.sendline(outer_pass)
-                
-                # Confirm outer password
-                child.expect('Repeat passphrase:')
-                child.sendline(outer_pass)
-                
-                # Wait for hidden password prompt
-                child.expect('Passphrase for hidden volume:')
-                child.sendline(hidden_pass)
-                
-                # Confirm hidden password
-                child.expect('Repeat passphrase:')
-                child.sendline(hidden_pass)
-                
-                # Wait for completion
-               
-                
-                if child.exitstatus == 0:
-                    print("\n✅ Hidden volume created successfully")
-                    return True
-                else:
-                    self.logger.error(f"tcplay exited with code {child.exitstatus}")
-                    print(f"❌ tcplay failed with exit code {child.exitstatus}")
-                    return False
-                
-            except pexpect.TIMEOUT:
-                child.close()
-                self.logger.error("tcplay timeout waiting for prompt")
-                print("❌ Timeout - tcplay not responding")
+            if result.returncode != 0:
+                self.logger.error(f"tcplay failed with exit code {result.returncode}")
+                print(f"\n❌ tcplay failed with exit code {result.returncode}")
                 return False
-            except pexpect.EOF:
-                child.close()
-                self.logger.error("tcplay closed unexpectedly")
-                print("❌ tcplay closed unexpectedly")
-                return False
+            
+            print("\n✅ Hidden volume created successfully")
+            return True
             
         except Exception as e:
             self.logger.error(f"Hidden volume setup failed: {e}")
@@ -349,62 +322,35 @@ class HiddenVolumeManager:
         """Open hidden volume"""
         try:
             print(f"\n🔓 Opening hidden volume as '{mapper_name}'...")
+            print("Enter the passphrase for the hidden volume when prompted.\n")
             
-            # Import pexpect
-            try:
-                import pexpect
-            except ImportError:
-                subprocess.run(['pip', 'install', 'pexpect'], check=True)
-                import pexpect
+            cmd = [
+                'tcplay',
+                f'--map={mapper_name}',
+                f'--device={self.partition}'
+            ]
             
-            # Spawn tcplay
-            child = pexpect.spawn(
-                f'tcplay --map={mapper_name} --device={self.partition}',
-                timeout=60,
-                encoding='utf-8'
-            )
+            result = subprocess.run(cmd)
             
-            child.logfile = sys.stdout
-            
-            try:
-                # Wait for passphrase prompt
-                child.expect('Enter passphrase:')
-                child.sendline(password)
-                
-                # Wait for completion
-                child.expect(pexpect.EOF)
-                child.close()
-                
-                if child.exitstatus != 0:
-                    self.logger.error(f"tcplay exited with code {child.exitstatus}")
-                    print(f"❌ Failed to open hidden volume")
-                    return False
-                
-                # Verify mapper device exists
-                mapper_path = f"/dev/mapper/{mapper_name}"
-                time.sleep(1)
-                
-                if not os.path.exists(mapper_path):
-                    self.logger.error(f"Mapper device {mapper_path} not found")
-                    print(f"❌ Mapper device {mapper_path} not created")
-                    return False
-                
-                print(f"✅ Hidden volume opened successfully")
-                print(f"   Device: {mapper_path}")
-                
-                self.logger.info("Hidden volume opened successfully")
-                return True
-                
-            except pexpect.TIMEOUT:
-                child.close()
-                self.logger.error("tcplay timeout")
-                print("❌ Timeout - tcplay not responding")
+            if result.returncode != 0:
+                self.logger.error(f"tcplay failed with exit code {result.returncode}")
+                print(f"❌ Failed to open hidden volume")
                 return False
-            except pexpect.EOF:
-                child.close()
-                self.logger.error("tcplay closed unexpectedly")
-                print("❌ tcplay closed unexpectedly")
+            
+            # Verify mapper device exists
+            mapper_path = f"/dev/mapper/{mapper_name}"
+            time.sleep(1)
+            
+            if not os.path.exists(mapper_path):
+                self.logger.error(f"Mapper device {mapper_path} not found")
+                print(f"❌ Mapper device {mapper_path} not created")
                 return False
+            
+            print(f"✅ Hidden volume opened successfully")
+            print(f"   Device: {mapper_path}")
+            
+            self.logger.info("Hidden volume opened successfully")
+            return True
             
         except Exception as e:
             self.logger.error(f"Failed to open hidden volume: {e}")
