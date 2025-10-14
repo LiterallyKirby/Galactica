@@ -506,34 +506,34 @@ class FilesystemManager:
         print("\n💾 Creating Btrfs filesystem...")
         
         try:
+            # Format the device
             subprocess.run([
                 'mkfs.btrfs', '-f',
                 '-L', label,
-                '-m', 'single',
-                '-d', 'single',
                 device
             ], check=True)
             
+            # Mount temporarily to create subvolumes
             subprocess.run(['mount', device, self.mount_point], check=True)
             
+            # Create subvolumes
             subvolumes = ['@', '@home', '@snapshots', '@var_log', '@var_cache']
             
             for subvol in subvolumes:
                 subprocess.run([
                     'btrfs', 'subvolume', 'create',
-                    self.mount_point / subvol[1:] if subvol != '@' else self.mount_point / 'root'
+                    self.mount_point / subvol
                 ], check=True)
                 print(f"  ✅ Created subvolume: {subvol}")
             
-            # Enable quotas for snapshot management
-            subprocess.run(['btrfs', 'quota', 'enable', self.mount_point], check=True)
-            
+            # Unmount
             subprocess.run(['umount', self.mount_point], check=True)
             
             return True
             
         except Exception as e:
             self.logger.error(f"Btrfs creation failed: {e}")
+            print(f"❌ Btrfs creation failed: {e}")
             return False
     
     def mount_filesystem(self, device: str) -> bool:
@@ -541,17 +541,20 @@ class FilesystemManager:
         print("\n📂 Mounting filesystem...")
         
         try:
-            mount_opts = 'noatime,compress=zstd:3,space_cache=v2,ssd'
+            mount_opts = 'noatime,compress=zstd:3,space_cache=v2'
             
+            # Mount @ subvolume as root
             subprocess.run([
                 'mount', '-o', f'subvol=@,{mount_opts}',
                 device, self.mount_point
             ], check=True)
             
+            # Create mount point directories
             dirs = ['boot', 'home', '.snapshots', 'var/log', 'var/cache']
             for d in dirs:
                 (self.mount_point / d).mkdir(parents=True, exist_ok=True)
             
+            # Mount other subvolumes
             subvol_mounts = [
                 ('@home', 'home', mount_opts),
                 ('@snapshots', '.snapshots', 'noatime'),
@@ -564,11 +567,13 @@ class FilesystemManager:
                     'mount', '-o', f'subvol={subvol},{opts}',
                     device, self.mount_point / path
                 ], check=True)
+                print(f"  ✅ Mounted {subvol} at /{path}")
             
             return True
             
         except Exception as e:
             self.logger.error(f"Mounting failed: {e}")
+            print(f"❌ Mounting failed: {e}")
             return False
     
     def create_efi_filesystem(self, device: str) -> bool:
