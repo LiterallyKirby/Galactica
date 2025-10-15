@@ -1,5 +1,5 @@
 CMakeFiles/gallium.dir/xdg-shell-protocol.c.o: \
- /home/kirby/Programming/Galactica/packages/Gallium/build/xdg-shell-protocol.c \
+ /home/kirby/Programming/Galactica/packages/Galactica/build/xdg-shell-protocol.c \
  /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \

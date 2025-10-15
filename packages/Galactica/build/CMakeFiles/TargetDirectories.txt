@@ -1,7 +1,7 @@
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/gallium.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/edit_cache.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/rebuild_cache.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/list_install_components.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/install.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/install/local.dir
-/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/install/strip.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/gallium.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/edit_cache.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/rebuild_cache.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/list_install_components.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/install.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/install/local.dir
+/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/install/strip.dir

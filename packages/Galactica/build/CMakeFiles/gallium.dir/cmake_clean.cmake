@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gallium.dir/link.d"
   "CMakeFiles/gallium.dir/src/main.c.o"
   "CMakeFiles/gallium.dir/src/main.c.o.d"
+  "CMakeFiles/gallium.dir/src/xen.c.o"
+  "CMakeFiles/gallium.dir/src/xen.c.o.d"
   "CMakeFiles/gallium.dir/xdg-shell-protocol.c.o"
   "CMakeFiles/gallium.dir/xdg-shell-protocol.c.o.d"
   "gallium"

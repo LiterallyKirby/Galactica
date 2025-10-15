@@ -1,14 +1,20 @@
 [
 {
-  "directory": "/home/kirby/Programming/Galactica/packages/Gallium/build",
-  "command": "/usr/bin/cc  -I/home/kirby/Programming/Galactica/packages/Gallium/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11 -o CMakeFiles/gallium.dir/src/main.c.o -c /home/kirby/Programming/Galactica/packages/Gallium/src/main.c",
-  "file": "/home/kirby/Programming/Galactica/packages/Gallium/src/main.c",
+  "directory": "/home/kirby/Programming/Galactica/packages/Galactica/build",
+  "command": "/usr/bin/cc  -I/home/kirby/Programming/Galactica/packages/Galactica/include -I/home/kirby/Programming/Galactica/packages/Galactica/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11 -o CMakeFiles/gallium.dir/src/main.c.o -c /home/kirby/Programming/Galactica/packages/Galactica/src/main.c",
+  "file": "/home/kirby/Programming/Galactica/packages/Galactica/src/main.c",
   "output": "CMakeFiles/gallium.dir/src/main.c.o"
 },
 {
-  "directory": "/home/kirby/Programming/Galactica/packages/Gallium/build",
-  "command": "/usr/bin/cc  -I/home/kirby/Programming/Galactica/packages/Gallium/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11 -o CMakeFiles/gallium.dir/xdg-shell-protocol.c.o -c /home/kirby/Programming/Galactica/packages/Gallium/build/xdg-shell-protocol.c",
-  "file": "/home/kirby/Programming/Galactica/packages/Gallium/build/xdg-shell-protocol.c",
+  "directory": "/home/kirby/Programming/Galactica/packages/Galactica/build",
+  "command": "/usr/bin/cc  -I/home/kirby/Programming/Galactica/packages/Galactica/include -I/home/kirby/Programming/Galactica/packages/Galactica/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11 -o CMakeFiles/gallium.dir/src/xen.c.o -c /home/kirby/Programming/Galactica/packages/Galactica/src/xen.c",
+  "file": "/home/kirby/Programming/Galactica/packages/Galactica/src/xen.c",
+  "output": "CMakeFiles/gallium.dir/src/xen.c.o"
+},
+{
+  "directory": "/home/kirby/Programming/Galactica/packages/Galactica/build",
+  "command": "/usr/bin/cc  -I/home/kirby/Programming/Galactica/packages/Galactica/include -I/home/kirby/Programming/Galactica/packages/Galactica/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11 -o CMakeFiles/gallium.dir/xdg-shell-protocol.c.o -c /home/kirby/Programming/Galactica/packages/Galactica/build/xdg-shell-protocol.c",
+  "file": "/home/kirby/Programming/Galactica/packages/Galactica/build/xdg-shell-protocol.c",
   "output": "CMakeFiles/gallium.dir/xdg-shell-protocol.c.o"
 }
 ]

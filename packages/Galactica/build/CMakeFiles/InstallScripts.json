@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/kirby/Programming/Galactica/packages/Gallium/build/cmake_install.cmake"
+		"/home/kirby/Programming/Galactica/packages/Galactica/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

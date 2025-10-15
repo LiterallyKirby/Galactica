@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/kirby/Programming/Galactica/packages/Gallium/CMakeLists.txt"
+  "/home/kirby/Programming/Galactica/packages/Galactica/CMakeLists.txt"
   "CMakeFiles/4.1.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeSystem.cmake"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"

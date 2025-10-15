@@ -1,8 +1,8 @@
-# Install script for directory: /home/kirby/Programming/Galactica/packages/Gallium
+# Install script for directory: /home/kirby/Programming/Galactica/packages/Galactica
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kirby/Programming/Galactica/packages/Gallium/build")
+  set(CMAKE_INSTALL_PREFIX "/home/kirby/Programming/Galactica/packages/Galactica/build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gallium"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kirby/Programming/Galactica/packages/Gallium/build/gallium")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/kirby/Programming/Galactica/packages/Galactica/build/gallium")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gallium" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gallium")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -59,13 +59,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/gallium.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+  include("/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/gallium.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/kirby/Programming/Galactica/packages/Gallium/build/install_local_manifest.txt"
+  file(WRITE "/home/kirby/Programming/Galactica/packages/Galactica/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -81,6 +81,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/kirby/Programming/Galactica/packages/Gallium/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/kirby/Programming/Galactica/packages/Galactica/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -3,6 +3,7 @@ gallium: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/gallium.dir/src/main.c.o \
+  CMakeFiles/gallium.dir/src/xen.c.o \
   CMakeFiles/gallium.dir/xdg-shell-protocol.c.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libwlroots-0.19.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libwayland-server.so \
@@ -13,6 +14,9 @@ gallium: \
   /usr/lib/libmvec.so.1 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libinput.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libxkbcommon.so \
+  /usr/lib/libxenctrl.so \
+  /usr/lib/libxenevtchn.so \
+  /usr/lib/libxenstore.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
@@ -64,6 +68,12 @@ gallium: \
   /usr/lib/libevdev.so.2 \
   /usr/lib/libwacom.so.9 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so.1 \
+  /usr/lib/libxentoollog.so.1 \
+  /usr/lib/libxencall.so.1 \
+  /usr/lib/libxengnttab.so.1 \
+  /usr/lib/libxenforeignmemory.so.1 \
+  /usr/lib/libxendevicemodel.so.1 \
+  /usr/lib/libxentoolcore.so.1 \
   /usr/lib/libGLdispatch.so.0 \
   /usr/lib/libexpat.so.1 \
   /usr/lib/libcap.so.2 \
@@ -82,6 +92,8 @@ gallium: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
 CMakeFiles/gallium.dir/src/main.c.o:
+
+CMakeFiles/gallium.dir/src/xen.c.o:
 
 CMakeFiles/gallium.dir/xdg-shell-protocol.c.o:
 
@@ -102,6 +114,12 @@ CMakeFiles/gallium.dir/xdg-shell-protocol.c.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libinput.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libxkbcommon.so:
+
+/usr/lib/libxenctrl.so:
+
+/usr/lib/libxenevtchn.so:
+
+/usr/lib/libxenstore.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
 
@@ -204,6 +222,18 @@ CMakeFiles/gallium.dir/xdg-shell-protocol.c.o:
 /usr/lib/libwacom.so.9:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so.1:
+
+/usr/lib/libxentoollog.so.1:
+
+/usr/lib/libxencall.so.1:
+
+/usr/lib/libxengnttab.so.1:
+
+/usr/lib/libxenforeignmemory.so.1:
+
+/usr/lib/libxendevicemodel.so.1:
+
+/usr/lib/libxentoolcore.so.1:
 
 /usr/lib/libGLdispatch.so.0:
 

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kirby/Programming/Galactica/packages/Gallium
+CMAKE_SOURCE_DIR = /home/kirby/Programming/Galactica/packages/Galactica
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kirby/Programming/Galactica/packages/Gallium/build
+CMAKE_BINARY_DIR = /home/kirby/Programming/Galactica/packages/Galactica/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/gallium.dir/clean
 CMakeFiles/gallium.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles --progress-num=1,2,3,4 "Built target gallium"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target gallium"
 .PHONY : CMakeFiles/gallium.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gallium.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gallium.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles 0
 .PHONY : CMakeFiles/gallium.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ gallium: CMakeFiles/gallium.dir/rule
 # codegen rule for target.
 CMakeFiles/gallium.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target gallium"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target gallium"
 .PHONY : CMakeFiles/gallium.dir/codegen
 
 # clean rule for target.

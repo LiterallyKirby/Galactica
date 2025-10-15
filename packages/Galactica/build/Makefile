@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kirby/Programming/Galactica/packages/Gallium
+CMAKE_SOURCE_DIR = /home/kirby/Programming/Galactica/packages/Galactica
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kirby/Programming/Galactica/packages/Gallium/build
+CMAKE_BINARY_DIR = /home/kirby/Programming/Galactica/packages/Galactica/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles /home/kirby/Programming/Galactica/packages/Gallium/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles /home/kirby/Programming/Galactica/packages/Galactica/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -198,6 +198,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/xen.o: src/xen.c.o
+.PHONY : src/xen.o
+
+# target to build an object file
+src/xen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/src/xen.c.o
+.PHONY : src/xen.c.o
+
+src/xen.i: src/xen.c.i
+.PHONY : src/xen.i
+
+# target to preprocess a source file
+src/xen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/src/xen.c.i
+.PHONY : src/xen.c.i
+
+src/xen.s: src/xen.c.s
+.PHONY : src/xen.s
+
+# target to generate assembly for a file
+src/xen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gallium.dir/build.make CMakeFiles/gallium.dir/src/xen.c.s
+.PHONY : src/xen.c.s
+
 xdg-shell-protocol.o: xdg-shell-protocol.c.o
 .PHONY : xdg-shell-protocol.o
 
@@ -238,6 +262,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/xen.o"
+	@echo "... src/xen.i"
+	@echo "... src/xen.s"
 	@echo "... xdg-shell-protocol.o"
 	@echo "... xdg-shell-protocol.i"
 	@echo "... xdg-shell-protocol.s"

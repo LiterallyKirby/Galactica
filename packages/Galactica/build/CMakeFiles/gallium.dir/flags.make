@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/kirby/Programming/Galactica/packages/Gallium/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm
+C_INCLUDES = -I/home/kirby/Programming/Galactica/packages/Galactica/include -I/home/kirby/Programming/Galactica/packages/Galactica/build -I/usr/include/wlroots-0.19 -I/usr/include/pixman-1 -I/usr/include/libdrm
 
 C_FLAGS =  -Wall -Wextra -Wpedantic -DWLR_USE_UNSTABLE -g -std=gnu11
 

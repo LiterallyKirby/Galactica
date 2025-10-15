@@ -20,25 +20,25 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
       - "/bin/"
     searched_directories:
-      - "/home/kirby/.cargo/bin/uname"
-      - "/home/kirby/.local/share/omarchy/bin/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "message-v1"
@@ -46,7 +46,7 @@ events:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 6.16.10-arch1-1 - x86_64
+      The system is: Linux - 6.17.2-arch1-1 - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -68,29 +68,30 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
-      - "/home/kirby/.cargo/bin/gmake"
-      - "/home/kirby/.local/share/omarchy/bin/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/bin/gmake"
-      - "/home/kirby/.cargo/bin/make"
-      - "/home/kirby/.local/share/omarchy/bin/make"
+      - "/usr/bin/site_perl/gmake"
+      - "/usr/bin/vendor_perl/gmake"
+      - "/usr/bin/core_perl/gmake"
       - "/usr/local/sbin/make"
       - "/usr/local/bin/make"
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -118,24 +119,24 @@ events:
       - "icx"
       - "clang"
     candidate_directories:
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
-      - "/home/kirby/.cargo/bin/cc"
-      - "/home/kirby/.local/share/omarchy/bin/cc"
       - "/usr/local/sbin/cc"
       - "/usr/local/bin/cc"
     found: "/usr/bin/cc"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -164,11 +165,12 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "message-v1"
@@ -190,7 +192,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/4.1.2/CompilerIdC/a.out
+        /home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/4.1.2/CompilerIdC/a.out
       
   -
     kind: "find-v1"
@@ -213,18 +215,20 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -247,18 +251,20 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -281,18 +287,20 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -315,18 +323,20 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -349,18 +359,20 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -383,18 +395,20 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -417,18 +431,20 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -451,18 +467,20 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -485,24 +503,27 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/home/kirby/.cargo/bin/dlltool"
-      - "/home/kirby/.local/share/omarchy/bin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
+      - "/usr/bin/site_perl/dlltool"
+      - "/usr/bin/vendor_perl/dlltool"
+      - "/usr/bin/core_perl/dlltool"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -525,18 +546,20 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -559,24 +582,27 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/home/kirby/.cargo/bin/tapi"
-      - "/home/kirby/.local/share/omarchy/bin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
+      - "/usr/bin/site_perl/tapi"
+      - "/usr/bin/vendor_perl/tapi"
+      - "/usr/bin/core_perl/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -602,34 +628,39 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
-      - "/home/kirby/.cargo/bin/gcc-ar-15.2"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
+      - "/usr/bin/site_perl/gcc-ar-15.2"
+      - "/usr/bin/vendor_perl/gcc-ar-15.2"
+      - "/usr/bin/core_perl/gcc-ar-15.2"
       - "/usr/bin/gcc-ar-15"
-      - "/home/kirby/.cargo/bin/gcc-ar-15"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ar-15"
       - "/usr/local/sbin/gcc-ar-15"
       - "/usr/local/bin/gcc-ar-15"
+      - "/usr/bin/site_perl/gcc-ar-15"
+      - "/usr/bin/vendor_perl/gcc-ar-15"
+      - "/usr/bin/core_perl/gcc-ar-15"
       - "/usr/bin/gcc-ar15"
-      - "/home/kirby/.cargo/bin/gcc-ar15"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ar15"
       - "/usr/local/sbin/gcc-ar15"
       - "/usr/local/bin/gcc-ar15"
+      - "/usr/bin/site_perl/gcc-ar15"
+      - "/usr/bin/vendor_perl/gcc-ar15"
+      - "/usr/bin/core_perl/gcc-ar15"
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "find-v1"
@@ -655,34 +686,39 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
-      - "/home/kirby/.cargo/bin/gcc-ranlib-15.2"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
+      - "/usr/bin/site_perl/gcc-ranlib-15.2"
+      - "/usr/bin/vendor_perl/gcc-ranlib-15.2"
+      - "/usr/bin/core_perl/gcc-ranlib-15.2"
       - "/usr/bin/gcc-ranlib-15"
-      - "/home/kirby/.cargo/bin/gcc-ranlib-15"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ranlib-15"
       - "/usr/local/sbin/gcc-ranlib-15"
       - "/usr/local/bin/gcc-ranlib-15"
+      - "/usr/bin/site_perl/gcc-ranlib-15"
+      - "/usr/bin/vendor_perl/gcc-ranlib-15"
+      - "/usr/bin/core_perl/gcc-ranlib-15"
       - "/usr/bin/gcc-ranlib15"
-      - "/home/kirby/.cargo/bin/gcc-ranlib15"
-      - "/home/kirby/.local/share/omarchy/bin/gcc-ranlib15"
       - "/usr/local/sbin/gcc-ranlib15"
       - "/usr/local/bin/gcc-ranlib15"
+      - "/usr/bin/site_perl/gcc-ranlib15"
+      - "/usr/bin/vendor_perl/gcc-ranlib15"
+      - "/usr/bin/core_perl/gcc-ranlib15"
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
       CMAKE_INSTALL_PREFIX: "."
   -
     kind: "try_compile-v1"
@@ -693,8 +729,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay"
-      binary: "/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay"
+      source: "/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv"
+      binary: "/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -703,13 +739,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay'
+        Change Dir: '/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2c545/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_2c545.dir/build.make CMakeFiles/cmTC_2c545.dir/build
-        make[1]: Entering directory '/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay'
-        Building C object CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f4aee/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_f4aee.dir/build.make CMakeFiles/cmTC_f4aee.dir/build
+        make[1]: Entering directory '/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv'
+        Building C object CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         Target: x86_64-pc-linux-gnu
@@ -717,8 +753,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20250813 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2c545.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccShgtgG.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f4aee.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc8q2gZX.s
         GNU C23 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20250813, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -732,14 +768,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 09af9d42b9185573b6c370dd7aa39e64
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/'
-         as -v --64 -o CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o /tmp/ccShgtgG.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/'
+         as -v --64 -o CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o /tmp/cc8q2gZX.s
         GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_2c545
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c545.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_f4aee
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4aee.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -750,14 +786,14 @@ events:
         gcc version 15.2.1 20250813 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2c545' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2c545.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuTm1rj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2c545 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f4aee' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f4aee.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cchNkEjI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_f4aee /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20250813
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuTm1rj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2c545 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cchNkEjI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_f4aee /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.45.0
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2c545' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2c545.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -o cmTC_2c545
-        make[1]: Leaving directory '/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f4aee' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f4aee.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -o cmTC_f4aee
+        make[1]: Leaving directory '/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv'
         
       exitCode: 0
   -
@@ -792,13 +828,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay']
+        ignore line: [Change Dir: '/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2c545/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_2c545.dir/build.make CMakeFiles/cmTC_2c545.dir/build]
-        ignore line: [make[1]: Entering directory '/home/kirby/Programming/Galactica/packages/Gallium/build/CMakeFiles/CMakeScratch/TryCompile-XFx0Ay']
-        ignore line: [Building C object CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f4aee/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_f4aee.dir/build.make CMakeFiles/cmTC_f4aee.dir/build]
+        ignore line: [make[1]: Entering directory '/home/kirby/Programming/Galactica/packages/Galactica/build/CMakeFiles/CMakeScratch/TryCompile-bSq4Dv']
+        ignore line: [Building C object CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -806,8 +842,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2c545.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccShgtgG.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f4aee.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc8q2gZX.s]
         ignore line: [GNU C23 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20250813  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -821,14 +857,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 09af9d42b9185573b6c370dd7aa39e64]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o /tmp/ccShgtgG.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o /tmp/cc8q2gZX.s]
         ignore line: [GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_2c545]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c545.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_f4aee]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4aee.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -839,13 +875,13 @@ events:
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2c545' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2c545.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuTm1rj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2c545 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f4aee' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f4aee.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cchNkEjI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_f4aee /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccuTm1rj.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cchNkEjI.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -860,7 +896,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_2c545] ==> ignore
+          arg [cmTC_f4aee] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -872,7 +908,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -887,7 +923,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20250813]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuTm1rj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2c545 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2c545.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cchNkEjI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_f4aee /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f4aee.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -935,11 +971,12 @@ events:
       - "pkg-config"
       - "pkgconf"
     candidate_directories:
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
       - "/usr/local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/"
@@ -948,9 +985,9 @@ events:
       - "/usr/"
       - "/bin/"
       - "/sbin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/bin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/sbin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/bin/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/sbin/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
       - "/usr/X11R6/bin/"
       - "/usr/X11R6/sbin/"
       - "/usr/X11R6/"
@@ -961,10 +998,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/kirby/.cargo/bin/pkg-config"
-      - "/home/kirby/.cargo/bin/pkgconf"
-      - "/home/kirby/.local/share/omarchy/bin/pkg-config"
-      - "/home/kirby/.local/share/omarchy/bin/pkgconf"
       - "/usr/local/sbin/pkg-config"
       - "/usr/local/sbin/pkgconf"
       - "/usr/local/bin/pkg-config"
@@ -972,21 +1005,26 @@ events:
     found: "/usr/bin/pkg-config"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
+...
+
+---
+events:
   -
     kind: "find-v1"
     backtrace:
@@ -1013,18 +1051,19 @@ events:
     found: "/usr/lib/libwlroots-0.19.so"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
@@ -1056,18 +1095,19 @@ events:
     found: "/usr/lib/libwayland-server.so"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
@@ -1099,23 +1139,28 @@ events:
     found: "/usr/lib/libm.so"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
+...
+
+---
+events:
   -
     kind: "find-v1"
     backtrace:
@@ -1142,18 +1187,19 @@ events:
     found: "/usr/lib/libinput.so"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
@@ -1185,18 +1231,91 @@ events:
     found: "/usr/lib/libxkbcommon.so"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:17 (find_library)"
+    mode: "library"
+    variable: "XENCTRL_LIB"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xenctrl"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/libxenctrl.so"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
@@ -1205,7 +1324,240 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "CMakeLists.txt:16 (find_program)"
+      - "CMakeLists.txt:18 (find_library)"
+    mode: "library"
+    variable: "XENEVTCHN_LIB"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xenevtchn"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/libxenevtchn.so"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:19 (find_library)"
+    mode: "library"
+    variable: "XENSTORE_LIB"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xenstore"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/lib/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/libxenstore.so"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:20 (find_path)"
+    mode: "path"
+    variable: "XEN_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xenctrl.h"
+    candidate_directories:
+      - "/usr/local/sbin/xen/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/xen/"
+      - "/usr/local/bin/"
+      - "/usr/bin/xen/"
+      - "/usr/bin/"
+      - "/usr/bin/site_perl/xen/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/xen/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/xen/"
+      - "/usr/bin/core_perl/"
+      - "/usr/local/include/xen/"
+      - "/usr/local/include/"
+      - "/usr/local/xen/"
+      - "/usr/local/"
+      - "/usr/include/xen/"
+      - "/usr/include/"
+      - "/usr/xen/"
+      - "/usr/"
+      - "/include/xen/"
+      - "/include/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/include/xen/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/include/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/xen/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
+      - "/usr/X11R6/include/xen/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/xen/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/xen/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/xen/"
+      - "/usr/pkg/"
+      - "/opt/include/xen/"
+      - "/opt/include/"
+      - "/opt/xen/"
+      - "/opt/"
+      - "/usr/include/X11/xen/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/usr/local/sbin/xen/xenctrl.h"
+      - "/usr/local/sbin/xenctrl.h"
+      - "/usr/local/bin/xen/xenctrl.h"
+      - "/usr/local/bin/xenctrl.h"
+      - "/usr/bin/xen/xenctrl.h"
+      - "/usr/bin/xenctrl.h"
+      - "/usr/bin/site_perl/xen/xenctrl.h"
+      - "/usr/bin/site_perl/xenctrl.h"
+      - "/usr/bin/vendor_perl/xen/xenctrl.h"
+      - "/usr/bin/vendor_perl/xenctrl.h"
+      - "/usr/bin/core_perl/xen/xenctrl.h"
+      - "/usr/bin/core_perl/xenctrl.h"
+      - "/usr/local/include/xen/xenctrl.h"
+      - "/usr/local/include/xenctrl.h"
+      - "/usr/local/xen/xenctrl.h"
+      - "/usr/local/xenctrl.h"
+      - "/usr/include/xen/xenctrl.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:32 (find_program)"
     mode: "program"
     variable: "WAYLAND_SCANNER"
     description: "Path to a program."
@@ -1220,11 +1572,12 @@ events:
     names:
       - "wayland-scanner"
     candidate_directories:
-      - "/home/kirby/.cargo/bin/"
-      - "/home/kirby/.local/share/omarchy/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
       - "/usr/local/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/"
@@ -1233,9 +1586,9 @@ events:
       - "/usr/"
       - "/bin/"
       - "/sbin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/bin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/sbin/"
-      - "/home/kirby/Programming/Galactica/packages/Gallium/build/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/bin/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/sbin/"
+      - "/home/kirby/Programming/Galactica/packages/Galactica/build/"
       - "/usr/X11R6/bin/"
       - "/usr/X11R6/sbin/"
       - "/usr/X11R6/"
@@ -1246,25 +1599,24 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/kirby/.cargo/bin/wayland-scanner"
-      - "/home/kirby/.local/share/omarchy/bin/wayland-scanner"
       - "/usr/local/sbin/wayland-scanner"
       - "/usr/local/bin/wayland-scanner"
     found: "/usr/bin/wayland-scanner"
     search_context:
       ENV{PATH}:
-        - "/home/kirby/.cargo/bin"
-        - "/home/kirby/.local/share/omarchy/bin/"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/home/kirby/Programming/Galactica/packages/Galactica/build"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
         - "/usr"
         - "/"
         - "/usr"
-        - "/home/kirby/Programming/Galactica/packages/Gallium/build"
+        - "/home/kirby/Programming/Galactica/packages/Galactica/build"
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
