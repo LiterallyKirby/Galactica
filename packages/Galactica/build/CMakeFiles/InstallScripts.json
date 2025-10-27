@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/kirby/Programming/Galactica/packages/Galactica/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-d688ebd8e5c80c8c7a76072520bd25c0 xdg-shell-protocol.h
