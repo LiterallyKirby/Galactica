@@ -22,4 +22,6 @@ i686-elf-ld -m elf_i386 -T src/link.ld -o build/kernel $OBJ_FILES
 
 # Run in QEMU
 echo "Launching QEMU..."
-qemu-system-i386 -kernel build/kernel
+
+qemu-system-i386 -kernel build/kernel -hda fat16.img
+

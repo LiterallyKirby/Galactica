@@ -21,7 +21,7 @@ void k_set_color(unsigned char color);
 void k_fill_rect(unsigned int x, unsigned int y, unsigned int width, unsigned int height, unsigned char color);
 void k_print_hex(unsigned int value, unsigned int line);
 void k_print_dec(unsigned int value, unsigned int line);
-
+int strcmp(const char* a, const char* b);
 /* Keyboard */
 void init_keyboard(void);
 char get_key(void);
